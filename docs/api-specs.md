@@ -68,8 +68,8 @@
 }
 ```
 
-### Get   
-- Purpose: 
+### Get Top Ten Most Repeated Purchases Item
+- Purpose: Untuk mendapatkan 10 barang yang diprediksi paling banyak dilakukan pembelian ulang.
 - Endpoint: `/get-predict-result-2`
 - HTTP Method: `GET`
 - Response Body (Success):
@@ -79,8 +79,8 @@
 }
 ```
 
-### Get
-- Purpose:
+### Get Ratio of Total Next Purchase Time in Week
+- Purpose: Untuk mendapatkan perbandingan jumlah prediksi pembelian pada tiap minggu dalam bulan yang diprediksi.
 - Endpoint: `/get-predict-result-3`
 - HTTP Method: `GET`
 - Response Body (Success):
@@ -90,8 +90,8 @@
 }
 ```
 
-### Get
-- Purpose:
+### Get Top Ten Provinces with The Most User Potential
+- Purpose: Untuk mendapatkan 10 provinsi yang memiliki pembeli potensial terbanyak.
 - Endpoint: `/get-predict-result-4`
 - HTTP Method: `GET`
 - Response Body (Success):
@@ -101,8 +101,8 @@
 }
 ```
 
-### Get
-- Purpose:
+### Update Database with New Data and Perform Prediction Algorithm
+- Purpose: Untuk melakukan update database dengan data 1 bulan transaksi baru.
 - Endpoint: `/update-new-data-and-predict/{month}`
 - HTTP Method: `GET`
 - Path Variable Enum:
