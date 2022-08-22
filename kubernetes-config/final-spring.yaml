@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: final-spring-deployment
+spec:
+  selector:
+    matchLabels:
+      app: final-spring-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: final-spring-app
+    spec:
+      containers:
+        - name: final-spring-app
+          image: docker.io/luthfiidrus/final
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 8080
+          resources:
+            limits:
+              memory: 2Gi
+            requests:
+              memory: 2Gi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: final-spring-service
+spec:
+  selector:
+    app: final-spring-app
+  ports:
+    - protocol: "TCP"
+      port: 8080
+      targetPort: 8080
+  type: LoadBalancer
